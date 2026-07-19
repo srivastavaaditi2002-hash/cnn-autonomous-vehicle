@@ -1,29 +1,38 @@
-# CNN for Autonomous Vehicles 🚗
+# 🚗 Autonomous Vehicle Vision System
 
-## 📌 Project Overview
-This project uses Convolutional Neural Networks (CNN) to detect and classify road objects such as cars, pedestrians, and traffic signs.
+## 📌 Project Description
+This project is a basic Autonomous Vehicle Vision System using Python and OpenCV.  
+It captures live video from camera and can be extended for object detection and self-driving features.
 
-## 🚀 Features
-- Image classification using CNN
-- Detects cars, pedestrians, and traffic signs
-- Can be extended to real-time detection
+---
 
-## 🛠️ Technologies Used
+## ⚙️ Technologies Used
 - Python
-- TensorFlow / Keras
 - OpenCV
+- NumPy
 
-## 🎯 Objective
-To build an AI-based vision system that improves decision-making in autonomous vehicles.
+---
 
-## 📂 Project Structure
-- dataset/ → images
-- model/ → trained model
-- main.py → main code file
+## ▶️ How to Run
+1. Install requirements:
+   pip install -r requirements.txt
 
-## 📊 Future Scope
-- Real-time object detection
-- Integration with self-driving systems
+2. Run the program:
+   python main.py
+
+---
+
+## 📸 Output
+Camera will open and show live video feed.
+
+---
+
+## 🚀 Future Scope
+- Object Detection (cars, people)
+- Lane Detection
+- Traffic Sign Recognition
+
+---
 
 ## 👩‍💻 Author
 Aditi Srivastava
