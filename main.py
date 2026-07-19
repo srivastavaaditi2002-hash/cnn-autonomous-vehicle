@@ -1,21 +1,18 @@
-import tensorflow as tf
-from tensorflow.keras import layers, models
+import cv2
 
-# CNN model
-model = models.Sequential([
-    layers.Conv2D(32, (3,3), activation='relu', input_shape=(64,64,3)),
-    layers.MaxPooling2D(2,2),
+print("Autonomous Vehicle System Running...")
 
-    layers.Conv2D(64, (3,3), activation='relu'),
-    layers.MaxPooling2D(2,2),
+cap = cv2.VideoCapture(0)
 
-    layers.Flatten(),
-    layers.Dense(64, activation='relu'),
-    layers.Dense(3, activation='softmax')
-])
+while True:
+    ret, frame = cap.read()
+    if not ret:
+        break
 
-model.compile(optimizer='adam',
-              loss='categorical_crossentropy',
-              metrics=['accuracy'])
+    cv2.imshow("Camera", frame)
 
-print("CNN Model Ready 🚀")
+    if cv2.waitKey(1) == 27:
+        break
+
+cap.release()
+cv2.destroyAllWindows()
